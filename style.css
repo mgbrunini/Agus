@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    align-items: center;
+}
+.panel-lateral{
+    width: 280px; 
+    height: 800px;
+    display: flex;
+    background: darkslategrey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+hr{
+    color: white;
+}
+
+.opciones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+#any{
+    visibility: hidden;
+}
