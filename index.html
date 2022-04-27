@@ -18,13 +18,13 @@
             <hr><br>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="#home">Home</a>
+                    <a href="#home" id="home" onclick="clickHome(); return false;">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="">Any</a>
+                    <a href="" id="any" onclick="clickAny(); return false;">Any</a>
                 </li>
                 <li>
-                    <a href="">Gaseosas</a>
+                    <a href="" id="any" onclick="clickGaseosa(); return false;">Gaseosas</a>
                 </li>
             </ul>
         </div>
@@ -32,11 +32,59 @@
     </div>
 
     <div class="container opciones">
-        <div id="home">
+        <div id="home_form">
             <img class="img-fluid" src="./img/fotoperfil__1_-removebg-preview.png" alt="">
         </div>
-        <div id="any">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione obcaecati ut non reprehenderit, maiores repellat! Porro fugiat adipisci dolore earum esse. Soluta temporibus itaque nemo dolores eius laudantium quam natus?</p>
+        <div id="any_form">
+            <form>
+                <!--Costo ( ya te lo dan ) 
+                IVA 21%
+                Ganancia 40%
+                Costo*1.21 = x
+                X*1.40 = costo al público-->
+
+                <div class="mb-3">
+                  <label for="" class="form-label">Costo</label>
+                  <input type="text" class="form-control" id="costo" aria-describedby="costo">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">IVA</label>
+                    <input type="text" class="form-control" id="iva" aria-describedby="costo" value="21">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Ganancia</label>
+                    <input type="text" class="form-control" id="ganancia" aria-describedby="costo" value="40">
+                </div>
+                <button type="button" onclick="resultadoAny()" class="btn btn-primary">Resultado</button><br><br>
+                <h3 id="resultado"></h3>
+              </form>
+        </div>
+        <div id="gaseosa_form">
+            <form>
+                <!--Gaseosas: 
+                    Precio - impuestos interno =x
+                    X dividido 1.21 (IVA) 
+                    Dividido cantidad unidades producto-->
+
+                <div class="mb-3">
+                  <label for="" class="form-label">Costo</label>
+                  <input type="text" class="form-control" id="costoG" aria-describedby="costoG">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Impuesto interno</label>
+                    <input type="text" class="form-control" id="impInt" aria-describedby="impInt" value="0">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">IVA</label>
+                    <input type="text" class="form-control" id="iva" aria-describedby="costo" value="21">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Cantidad de unidades de ese producto</label>
+                    <input type="text" class="form-control" id="unidades" aria-describedby="unidades" value="">
+                </div>
+                <button type="button" onclick="resultadoGaseosa()" class="btn btn-primary">Resultado</button><br><br>
+                <h3 id="resultadoG"></h3>
+              </form>
         </div>
     </div>
     

@@ -4,7 +4,7 @@ body{
 }
 .panel-lateral{
     width: 280px; 
-    height: 800px;
+    height: 650px;
     display: flex;
     background: darkslategrey;
     color: white;
@@ -22,7 +22,10 @@ hr{
     justify-content: center;
 }
 
+#home_form{
+    position: relative;
+}
 
-#any{
-    visibility: hidden;
+#any_form, #gaseosa_form{
+    display: none;
 }
