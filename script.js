@@ -29,9 +29,9 @@ function clickGaseosa(){
 function resultadoGaseosa(){
     let costovar = parseInt(document.getElementById("costoG").value);
     let impIntvar = parseInt(document.getElementById("impInt").value);
-    let ivavar = ((parseInt(document.getElementById("iva").value))/100)+1;
+    let ivavar = (parseInt(document.getElementById("iva").value))/100;
     let unidadesvar = parseInt(document.getElementById("unidades").value);
-    let result = (costovar - impIntvar)*ivavar;
+    let result = (costovar - impIntvar)-ivavar;
     let reResult = result / unidadesvar;
     let respuesta = "El precio final por unidad es $" + reResult.toFixed(2);
     document.getElementById("resultadoG").innerHTML = respuesta;
