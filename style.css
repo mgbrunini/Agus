@@ -1,12 +1,12 @@
 body{
     display: flex;
     align-items: center;
+    background: linear-gradient(to left, #97d3d3, #2f4f4f);
 }
 .panel-lateral{
     width: 280px; 
     height: 650px;
     display: flex;
-    background: darkslategrey;
     color: white;
     display: flex;
     flex-direction: column;
@@ -14,6 +14,15 @@ body{
 
 hr{
     color: white;
+}
+li{
+    padding-bottom: 8px;
+    list-style: inside;
+    margin-left: 50px;;
+}
+a{
+    color: white;
+    text-decoration: none;
 }
 
 .opciones{
@@ -26,6 +35,6 @@ hr{
     position: relative;
 }
 
-#any_form, #gaseosa_form{
+#comestibles_form, #gaseosa_form{
     display: none;
 }
