@@ -31,7 +31,7 @@ function resultadoGaseosa(){
     let impIntvar = parseInt(document.getElementById("impInt").value);
     let unidadesvar = parseInt(document.getElementById("unidades").value);
     let resta = (costovar - impIntvar);
-    let result = resta - (resta*0.21);
+    let result = resta / 1.21;
     let reResult = result / unidadesvar;
     let respuesta = "El precio final por unidad es $" + reResult.toFixed(2);
     document.getElementById("resultadoG").innerHTML = respuesta;
