@@ -11,9 +11,9 @@ function clickComestibles(){
 }
 
 function resultadoComestibles(){
-    let costovar = parseInt(document.getElementById("costo").value);
-    let ivavar = parseInt(document.getElementById("iva").value);
-    let gananciavar = parseInt(document.getElementById("ganancia").value);
+    let costovar = parseFloat(document.getElementById("costo").value);
+    let ivavar = parseFloat(document.getElementById("iva").value);
+    let gananciavar = parseFloat(document.getElementById("ganancia").value);
     let result = costovar + (costovar*(ivavar/100)); 41.14
     let reResult = result + (result*(gananciavar/100)); 57.59
     let respuesta = "El precio final es $" + reResult.toFixed(2);
@@ -27,12 +27,19 @@ function clickGaseosa(){
 }
 
 function resultadoGaseosa(){
-    let costovar = parseInt(document.getElementById("costoG").value);
-    let impIntvar = parseInt(document.getElementById("impInt").value);
-    let unidadesvar = parseInt(document.getElementById("unidades").value);
+    let costovar = parseFloat(document.getElementById("costoG").value);
+    let impIntvar = parseFloat(document.getElementById("impInt").value);
+    let unidadesvar = parseFloat(document.getElementById("unidades").value);
     let resta = (costovar - impIntvar);
     let result = resta / 1.21;
     let reResult = result / unidadesvar;
     let respuesta = "El precio final por unidad es $" + reResult.toFixed(2);
     document.getElementById("resultadoG").innerHTML = respuesta;
+    console.log(costovar);
+    console.log(impIntvar);
+    console.log(unidadesvar);
+    console.log("-----------");
+    console.log(resta);
+    console.log(result);
+    console.log(reResult);
 }
