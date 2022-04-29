@@ -35,11 +35,4 @@ function resultadoGaseosa(){
     let reResult = result / unidadesvar;
     let respuesta = "El precio final por unidad es $" + reResult.toFixed(2);
     document.getElementById("resultadoG").innerHTML = respuesta;
-    console.log(costovar);
-    console.log(impIntvar);
-    console.log(unidadesvar);
-    console.log("-----------");
-    console.log(resta);
-    console.log(result);
-    console.log(reResult);
 }
