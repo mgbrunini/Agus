@@ -16,8 +16,11 @@ function resultadoComestibles(){
     let gananciavar = parseFloat(document.getElementById("ganancia").value);
     let result = costovar + (costovar*(ivavar/100)); 41.14
     let reResult = result + (result*(gananciavar/100)); 57.59
-    let respuesta = "El precio final es $" + reResult.toFixed(2);
+    let respuesta = "El precio final es $" + reResult.toFixed(5);
     document.getElementById("resultado").innerHTML = respuesta;
+    document.getElementById("costo").value = "";
+    document.getElementById("iva").value = "21";
+    document.getElementById("ganancia").value = "40";
 }
 
 function clickGaseosa(){
@@ -33,6 +36,9 @@ function resultadoGaseosa(){
     let resta = (costovar - impIntvar);
     let result = resta / 1.21;
     let reResult = result / unidadesvar;
-    let respuesta = "El precio final por unidad es $" + reResult.toFixed(2);
+    let respuesta = "El precio final por unidad es $" + reResult.toFixed(5);
     document.getElementById("resultadoG").innerHTML = respuesta;
+    document.getElementById("costoG").value = "";
+    document.getElementById("impInt").value = "0";
+    document.getElementById("unidades").value = "";
 }

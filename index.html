@@ -13,7 +13,7 @@
     <div class="panel-lateral"> 
         <div class="container">
             <div>
-                <span class="fs-4">Calculadora de costos v1.2</span>
+                <span class="fs-4">Calculadora de costos v1.3</span>
             </div>
             <hr><br>
             <ul class="nav nav-pills flex-column mb-auto">
@@ -45,15 +45,15 @@
                 <h1>Calculadora de comestibles</h1><br>
                 <div class="mb-3">
                   <label for="" class="form-label">Costo</label>
-                  <input type="text" class="form-control" id="costo" aria-describedby="costo">
+                  <input type="number" class="form-control" id="costo" aria-describedby="costo">
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">IVA</label>
-                    <input type="text" class="form-control" id="iva" aria-describedby="costo" value="21">
+                    <input type="number" class="form-control" id="iva" aria-describedby="costo" value="21">
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Ganancia</label>
-                    <input type="text" class="form-control" id="ganancia" aria-describedby="costo" value="40">
+                    <input type="number" class="form-control" id="ganancia" aria-describedby="costo" value="40">
                 </div>
                 <button type="button" onclick="resultadoComestibles()" class="btn btn-primary">Resultado</button><br><br>
                 <h3 id="resultado"></h3>
@@ -68,15 +68,15 @@
                     <h1>Calculadora de gaseosas</h1><br>
                 <div class="mb-3">
                   <label for="" class="form-label">Precio</label>
-                  <input type="text" class="form-control" id="costoG" aria-describedby="costoG">
+                  <input type="number" class="form-control" id="costoG" aria-describedby="costoG">
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Impuesto interno</label>
-                    <input type="text" class="form-control" id="impInt" aria-describedby="impInt" value="0">
+                    <input type="number" class="form-control" id="impInt" aria-describedby="impInt" value="0">
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Cantidad de unidades de ese producto</label>
-                    <input type="text" class="form-control" id="unidades" aria-describedby="unidades" value="">
+                    <input type="number" class="form-control" id="unidades" aria-describedby="unidades" value="">
                 </div>
                 <button type="button" onclick="resultadoGaseosa()" class="btn btn-primary">Resultado</button><br><br>
                 <h3 id="resultadoG"></h3>
