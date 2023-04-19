@@ -20,7 +20,7 @@ function resultadoComestibles(){
     document.getElementById("resultado").innerHTML = respuesta;
     document.getElementById("costo").value = "";
     document.getElementById("iva").value = "21";
-    document.getElementById("ganancia").value = "40";
+    document.getElementById("ganancia").value = "50";
 }
 
 function clickGaseosa(){
