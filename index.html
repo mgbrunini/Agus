@@ -10,81 +10,102 @@
     <title>Calculadora de costos</title>
 </head>
 <body>
-    <div class="panel-lateral"> 
-        <div class="container">
-            <div>
-                <span class="fs-4">Calculadora de costos v1.3</span>
+    <div class="principal">
+        <div class="panel-lateral"> 
+            <div class="container">
+                <div>
+                    <span class="fs-4">Calculadora de costos v1.3</span>
+                </div>
+                <hr><br>
+                <div class="menu">
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <button type="button" id="home" class="btn btn-primary" onclick="clickHome(); return false;">Home</button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-primary" id="#comestibles" onclick="clickComestibles(); return false;">Comestibles</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-primary" id="#gaseosas" onclick="clickGaseosa(); return false;">Gaseosas</button>
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
-            <hr><br>
-            <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                    <a href="#home" id="home" onclick="clickHome(); return false;">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" id="#comestibles" onclick="clickComestibles(); return false;">Comestibles</a>
-                </li>
-                <li>
-                    <a href="" id="#gaseosas" onclick="clickGaseosa(); return false;">Gaseosas</a>
-                </li>
-            </ul>
+            
         </div>
-        
-    </div>
+    
+        <div class="container opciones">
+            <div id="home_form">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/logo ypf vedia.png" class="d-block img-fluid" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/Agus's job.png" class="d-block img-fluid" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/Maty beuti.png" class="d-block img-fluid" alt="...">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div id="comestibles_form">
+                <form>
+                    <!--Costo ( ya te lo dan ) 
+                    IVA 21%
+                    Ganancia 40%
+                    Costo*1.21 = x
+                    X*1.40 = costo al público-->
+                    <h1>Calculadora de comestibles</h1><br>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Costo</label>
+                      <input type="number" class="form-control" id="costo" aria-describedby="costo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">IVA</label>
+                        <input type="number" class="form-control" id="iva" aria-describedby="costo" value="21">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Ganancia</label>
+                        <input type="number" class="form-control" id="ganancia" aria-describedby="costo" value="50">
+                    </div>
+                    <button type="button" onclick="resultadoComestibles()" class="btn btn-primary">Resultado</button><br><br>
+                    <h3 id="resultado"></h3>
+                  </form>
+            </div>
+            <div id="gaseosa_form">
+                <form>
+                    <!--Gaseosas: 
+                        Precio - impuestos interno =x
+                        X dividido 1.21 (IVA) 
+                        Dividido cantidad unidades producto-->
+                        <h1>Calculadora de gaseosas</h1><br>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Precio</label>
+                      <input type="number" class="form-control" id="costoG" aria-describedby="costoG">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Impuesto interno</label>
+                        <input type="number" class="form-control" id="impInt" aria-describedby="impInt" value="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Cantidad de unidades de ese producto</label>
+                        <input type="number" class="form-control" id="unidades" aria-describedby="unidades" value="">
+                    </div>
+                    <button type="button" onclick="resultadoGaseosa()" class="btn btn-primary">Resultado</button><br><br>
+                    <h3 id="resultadoG"></h3>
+                  </form>
+            </div>
+        </div>
 
-    <div class="container opciones">
-        <div id="home_form">
-            <img class="img-fluid" src="./img/fotoperfil__1_-removebg-preview.png" alt="">
-        </div>
-        <div id="comestibles_form">
-            <form>
-                <!--Costo ( ya te lo dan ) 
-                IVA 21%
-                Ganancia 40%
-                Costo*1.21 = x
-                X*1.40 = costo al público-->
-                <h1>Calculadora de comestibles</h1><br>
-                <div class="mb-3">
-                  <label for="" class="form-label">Costo</label>
-                  <input type="number" class="form-control" id="costo" aria-describedby="costo">
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">IVA</label>
-                    <input type="number" class="form-control" id="iva" aria-describedby="costo" value="21">
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Ganancia</label>
-                    <input type="number" class="form-control" id="ganancia" aria-describedby="costo" value="40">
-                </div>
-                <button type="button" onclick="resultadoComestibles()" class="btn btn-primary">Resultado</button><br><br>
-                <h3 id="resultado"></h3>
-              </form>
-        </div>
-        <div id="gaseosa_form">
-            <form>
-                <!--Gaseosas: 
-                    Precio - impuestos interno =x
-                    X dividido 1.21 (IVA) 
-                    Dividido cantidad unidades producto-->
-                    <h1>Calculadora de gaseosas</h1><br>
-                <div class="mb-3">
-                  <label for="" class="form-label">Precio</label>
-                  <input type="number" class="form-control" id="costoG" aria-describedby="costoG">
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Impuesto interno</label>
-                    <input type="number" class="form-control" id="impInt" aria-describedby="impInt" value="0">
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Cantidad de unidades de ese producto</label>
-                    <input type="number" class="form-control" id="unidades" aria-describedby="unidades" value="">
-                </div>
-                <button type="button" onclick="resultadoGaseosa()" class="btn btn-primary">Resultado</button><br><br>
-                <h3 id="resultadoG"></h3>
-              </form>
-        </div>
     </div>
     
+    
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+           
+      </script>
 </body>
 </html>

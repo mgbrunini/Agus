@@ -42,3 +42,6 @@ function resultadoGaseosa(){
     document.getElementById("impInt").value = "0";
     document.getElementById("unidades").value = "";
 }
+
+// Responsive para celulares
+

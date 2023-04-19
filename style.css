@@ -1,40 +1,89 @@
 body{
     display: flex;
-    align-items: center;
-    background: linear-gradient(to left, #97d3d3, #2f4f4f);
-}
-.panel-lateral{
-    width: 280px; 
-    height: 650px;
-    display: flex;
-    color: white;
-    display: flex;
-    flex-direction: column;
+    background: linear-gradient(to left, #709ec2d3, #0070c4);
 }
 
-hr{
-    color: white;
-}
-li{
-    padding-bottom: 8px;
-    list-style: inside;
-    margin-left: 50px;;
-}
-a{
-    color: white;
-    text-decoration: none;
+/*Responsive PC*/
+@media (min-width: 501px) {
+    /*Div principal*/
+    .principal{
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+    }
+    /*Panel lateral izquierdo*/
+    .panel-lateral{
+        width: 280px; 
+        height: 650px;
+        display: flex;
+        color: white;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav{
+        align-items: center;
+    }
+
+    /*Panel lateral derecho*/
+    .carousel{
+        width: 500px;
+    }
+
+    hr{
+        color: white;
+    }
+    li{
+        padding-bottom: 8px;
+        /*margin-left: 25px;*/
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    button{
+        width: 150px;
+    }
+    .opciones{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #home_form{
+        position: relative;
+    }
+
+    #comestibles_form, #gaseosa_form{
+        display: none;
+    }
 }
 
-.opciones{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+/*Responsive celular*/
+@media (max-width: 500px) {
+    .principal{
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+    }
+    
+    button{
+        width: 150px;
+        height: 150px;
+    }
 
-#home_form{
-    position: relative;
-}
+    span{
+        color: white;
+    }
 
-#comestibles_form, #gaseosa_form{
-    display: none;
+    .nav{
+        display: flex;
+        flex-direction: initial!important;
+        justify-content: center;
+    }
 }
